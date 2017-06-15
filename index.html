@@ -9,7 +9,7 @@
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         (function() {
-            $.getJSON('/get.php', function(result) {
+            $.getJSON('/index.php', function(result) {
                 console.log({
                     appId: result.appId,
                     timestamp: result.timestamp,
@@ -22,7 +22,7 @@
                     timestamp: result.timestamp,
                     nonceStr: result.nonceStr,
                     signature: result.signature
-                });    
+                });
             });
         }());
 

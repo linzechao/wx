@@ -29,6 +29,15 @@
         .imgSrc {
             width: 100%;
         }
+
+        p {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        el-button {
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -37,28 +46,18 @@
             <h1>欢迎来到MR联盟</h1>
         </header>
 
-        <el-row :gutter="20">
-            <el-col :span="6"><div class="grid-content bg-purple">
+        <article>
+            <p>
                 <el-button type="success" @click="chooseImage()">选择图片</el-button>
-            </div></el-col>
-
-            <el-col :span="6"><div class="grid-content bg-purple">
                 <el-button type="warning" @click="previewImage()">预览图片</el-button>
-            </div></el-col>
+            </p>
 
-            <el-col :span="6"><div class="grid-content bg-purple">
+            <p>
                 <el-button type="danger" @click="startRecord()">开始录音</el-button>
-            </div></el-col>
-
-            <el-col :span="6"><div class="grid-content bg-purple">
                 <el-button type="info" @click="stopRecord()">停止录音</el-button>
-            </div></el-col>
-
-            <el-col :span="6"><div class="grid-content bg-purple">
                 <el-button type="success" @click="playVoice()">播放录音</el-button>
-            </div></el-col>
-
-        </el-row>
+            </p>
+        </article>
 
         <img class="test-img" :src="imgSrc">
     </section>
@@ -72,8 +71,8 @@
         $noncestr = 'Wm3WZYTPz0wzccnW';
         $timestamp = time();
         $url = 'http://wx.mrsuper.top/home.php';
-        $token = 'WjedJvrLg9mUys3WUyp_8V92HGoCPqqBAwvtwJQYhF7eMswhirP4bl-uTpU1IysfzWtuFzLtfPANGWNbkrMsk_hOLED0Py_iyDGEpiifRqqTl0u4YD-Vzp3DOoDpnTjiATCdABAMFO';
-        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-HaGGGWLOihVtpPUqI2SEzbvaIVXeR_OevdRJMHhAyLQ';
+        $token = '0vF0b_9ITyskCOyb8ane93GmHadq7osO9cVkymq9YYaoQo4upVLnPSCpJJC_YuK9-tZ_2F9h6u7mWshx4PGvZZgBqEXwY6sak_UqLNswyiHn8qYh7BJd4OrKq3maK4MYKISdAEASQA';
+        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-IUila8rsaeH5jeCR-_R-Q9KtWMSd1DIXKtstizvZD4Q';
         $fit = 'jsapi_ticket='.$jsapi_ticket.'&noncestr='.$noncestr.'&timestamp='.$timestamp.'&url='.$url;
         $signature = sha1($fit);
     ?>
