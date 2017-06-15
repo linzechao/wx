@@ -7,11 +7,11 @@ $url = 'http://wx.mrsuper.top';
 
 
 // 获取Token
-$token = '0vF0b_9ITyskCOyb8ane93GmHadq7osO9cVkymq9YYaoQo4upVLnPSCpJJC_YuK9-tZ_2F9h6u7mWshx4PGvZZgBqEXwY6sak_UqLNswyiHn8qYh7BJd4OrKq3maK4MYKISdAEASQA';
+$token = '-M-7DP7jUzJSq5gDr8UE6qTQGWllC9r7f3w7YUZuIXr7HzER6G5LiUOOiaHWIMDof3uflmKzIeXfa1faTLg3EAGQgJSa3vQRST620eWxNrsXEJbAEAPWB';
 
 
 // 获取JS API Ticket
-$jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-IUila8rsaeH5jeCR-_R-Q9KtWMSd1DIXKtstizvZD4Q';
+$jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-4pQxl8B5OZAqvYMgeoF7rWY1NJVOQYIHA-4LvpFSnKw';
 
 
 // 拼接签名

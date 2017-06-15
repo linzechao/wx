@@ -12,20 +12,6 @@
             margin: 0;
         }
 
-        header {
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            color: white;
-            background-color: black;
-        }
-
-        h1 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 14px;
-        }
-
         .imgSrc {
             width: 100%;
         }
@@ -42,10 +28,6 @@
 </head>
 <body>
     <section id="app">
-        <header>
-            <h1>欢迎来到MR联盟</h1>
-        </header>
-
         <article>
             <p>
                 <el-button type="success" @click="chooseImage()">选择图片</el-button>
@@ -71,8 +53,8 @@
         $noncestr = 'Wm3WZYTPz0wzccnW';
         $timestamp = time();
         $url = 'http://wx.mrsuper.top/home.php';
-        $token = '0vF0b_9ITyskCOyb8ane93GmHadq7osO9cVkymq9YYaoQo4upVLnPSCpJJC_YuK9-tZ_2F9h6u7mWshx4PGvZZgBqEXwY6sak_UqLNswyiHn8qYh7BJd4OrKq3maK4MYKISdAEASQA';
-        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-IUila8rsaeH5jeCR-_R-Q9KtWMSd1DIXKtstizvZD4Q';
+        $token = '-M-7DP7jUzJSq5gDr8UE6qTQGWllC9r7f3w7YUZuIXr7HzER6G5LiUOOiaHWIMDof3uflmKzIeXfa1faTLg3EAGQgJSa3vQRST620eWxNrsXEJbAEAPWB';
+        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-4pQxl8B5OZAqvYMgeoF7rWY1NJVOQYIHA-4LvpFSnKw';
         $fit = 'jsapi_ticket='.$jsapi_ticket.'&noncestr='.$noncestr.'&timestamp='.$timestamp.'&url='.$url;
         $signature = sha1($fit);
     ?>
@@ -183,5 +165,4 @@
     </script>
 </body>
 </html>
-
 
