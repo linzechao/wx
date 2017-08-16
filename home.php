@@ -53,8 +53,8 @@
         $noncestr = 'Wm3WZYTPz0wzccnW';
         $timestamp = time();
         $url = 'http://wx.mrsuper.top/home.php';
-        $token = '-M-7DP7jUzJSq5gDr8UE6qTQGWllC9r7f3w7YUZuIXr7HzER6G5LiUOOiaHWIMDof3uflmKzIeXfa1faTLg3EAGQgJSa3vQRST620eWxNrsXEJbAEAPWB';
-        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj-4pQxl8B5OZAqvYMgeoF7rWY1NJVOQYIHA-4LvpFSnKw';
+        $token = 'wupO_ghY5_ssOFlc5a1bQy-3gG7mMZnfkNnlfs982H_OSGe0dk1hX1GT4_59XyX5YLOweJ0Y0bvLlxebQyoUbpg6ntBXM5RsfpLvsvESQZvV9-L9SfOJUqxePRoLSsAWURDaAGALIU';
+        $jsapi_ticket = 'sM4AOVdWfPE4DxkXGEs8VObj4YPT20WnBsxcp-gWQj_ZDwSr9PWD9CoE8sjlRT8XTYifV3fgJ6jIfgZ-jZQcwg';
         $fit = 'jsapi_ticket='.$jsapi_ticket.'&noncestr='.$noncestr.'&timestamp='.$timestamp.'&url='.$url;
         $signature = sha1($fit);
     ?>

@@ -3,39 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <button id="pay" type="button">支付</button>
+
     <script src="http://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script>
         (function() {
-            $.getJSON('/index.php', function(result) {
-                console.log({
-                    appId: result.appId,
-                    timestamp: result.timestamp,
-                    nonceStr: result.nonceStr,
-                    signature: result.signature
-                });
+            var CONFIG = {};
 
-                initWX({
-                    appId: result.appId,
-                    timestamp: result.timestamp,
-                    nonceStr: result.nonceStr,
-                    signature: result.signature
+            $.ajax({
+                url: '/get.php',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    URL: location.href.split('#')[0]
+                },
+                success: function(result) {
+                    CONFIG = result;
+
+                    wx.config({
+                        debug: true,
+                        appId: CONFIG.appId,
+                        timestamp: CONFIG.timestamp,
+                        nonceStr: CONFIG.nonceStr,
+                        signature: CONFIG.signature,
+                        jsApiList: ['chooseWXPay']
+                    });
+                }
+            })
+
+            wx.ready(function() {
+                // alert('OK');
+            });
+
+            wx.error(function() {
+                // alert('ON');
+            });
+
+            $('#pay').on('click', function() {
+                wx.chooseWXPay({
+                    timestamp: CONFIG.timestamp,
+                    nonceStr: CONFIG.nonceStr,
+                    package: 'prepay_id',
+                    signType: 'SHA1',
+                    paySign: '支付签名',
+                    success: function() {
+                        console.log('支付成功，gg');
+                    }
                 });
             });
         }());
-
-        function initWX(config) {
-            wx.config({
-                debug: true,
-                appId: config.appId,
-                timestamp: config.timestamp,
-                nonceStr: config.nonceStr,
-                signature: config.signature,
-                jsApiList: ['onMenuShareAppMessage']
-            }); 
-        }
     </script>
 </body>
 </html>
